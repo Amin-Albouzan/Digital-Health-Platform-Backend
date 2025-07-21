@@ -1,0 +1,14 @@
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\bin\Debug\net8.0\DijitalSaglikPlatformu.deps.json
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\bin\Debug\net8.0\DijitalSaglikPlatformu.runtimeconfig.json
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\bin\Debug\net8.0\DijitalSaglikPlatformu.dll
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\bin\Debug\net8.0\DijitalSaglikPlatformu.pdb
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\DijitalSaglikPlatformu.csproj.AssemblyReference.cache
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\DijitalSaglikPlatformu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\DijitalSaglikPlatformu.AssemblyInfoInputs.cache
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\DijitalSaglikPlatformu.AssemblyInfo.cs
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\DijitalSaglikPlatformu.csproj.CoreCompileInputs.cache
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\DijitalSaglikPlatformu.dll
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\refint\DijitalSaglikPlatformu.dll
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\DijitalSaglikPlatformu.pdb
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\DijitalSaglikPlatformu.genruntimeconfig.cache
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\ref\DijitalSaglikPlatformu.dll

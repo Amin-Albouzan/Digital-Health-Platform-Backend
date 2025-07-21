@@ -1,0 +1,6 @@
+@DıjıtalSaglikPlatformApi_HostAddress = http://localhost:5081
+
+GET {{DıjıtalSaglikPlatformApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

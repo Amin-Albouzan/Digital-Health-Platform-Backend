@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DijitalSaglikPlatformu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+109f4f7e681657372229d8b3c518f1d6c3adae6a")]
 [assembly: System.Reflection.AssemblyProductAttribute("DijitalSaglikPlatformu")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DijitalSaglikPlatformu")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

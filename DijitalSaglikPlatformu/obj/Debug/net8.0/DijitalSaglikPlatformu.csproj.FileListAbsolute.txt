@@ -12,3 +12,4 @@ C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debu
 C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\DijitalSaglikPlatformu.pdb
 C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\DijitalSaglikPlatformu.genruntimeconfig.cache
 C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\ref\DijitalSaglikPlatformu.dll
+C:\Users\acer\Desktop\DıjıtalSaglikPlatformApi\DijitalSaglikPlatformu\obj\Debug\net8.0\DijitalSaglikPlatformu.sourcelink.json

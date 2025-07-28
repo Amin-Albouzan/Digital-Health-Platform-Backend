@@ -9,5 +9,7 @@ namespace DijitalSaglikPlatformu.Models
 {
     public class AppUser : IdentityUser
     {
+        public List<RefreshToken>? RefreshTokens { get; set; }
+        public DoctorProfile DoctorProfile { get; set; }
     }
 }

@@ -31,6 +31,7 @@ namespace DijitalSaglikPlatformu.Extentions
                     ValidateIssuer = true,
                     ValidIssuer = configuration["JWT:Issuer"],
                     ValidateAudience = true,
+                    ValidAudience = configuration["JWT:Audience"],   
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(
                         Encoding.UTF8.GetBytes(configuration["JWT:SecretKey"]))

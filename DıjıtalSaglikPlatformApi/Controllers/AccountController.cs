@@ -1,6 +1,7 @@
 ﻿using DijitalSaglikPlatformu.Dto;
 using DijitalSaglikPlatformu.Models;
 using DijitalSaglikPlatformu.Repo.Account;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -20,6 +21,18 @@ namespace DıjıtalSaglikPlatformApi.Controllers
             this.configuration = Con;
 
         }
+
+
+        [HttpGet("CheckToken")]
+        [Authorize]
+        public IActionResult CheckToken()
+        {
+            return Ok(new { message = "Token is valid" });
+        }
+
+
+
+
 
 
         [HttpPost("RegisterNewUser/{role}")]
@@ -50,14 +63,97 @@ namespace DıjıtalSaglikPlatformApi.Controllers
             }
 
 
-           catch (Exception ex)
+            catch (Exception ex)
             {
-
-                return BadRequest(ex);
+                var errorMessage = ex.InnerException?.Message ?? ex.Message;
+                return StatusCode(500, $"Error: {errorMessage}");
             }
 
-            
+
         }
+
+
+
+
+
+
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login(dtoLogin login)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var result = await accountRepo.Login(login);
+
+                    if (result is string message && message == "Invalid username or password")
+                    {
+                        return Unauthorized(message);
+                    }
+
+                    return Ok(result);
+
+                }
+
+                else
+                {
+                    return BadRequest(ModelState);
+                }
+
+            }
+
+
+            catch (Exception ex)
+            {
+                var errorMessage = ex.InnerException?.Message ?? ex.Message;
+                return StatusCode(500, $"Error: {errorMessage}");
+            }
+
+
+
+
+        }
+
+
+
+        [HttpPost("RefreshToken")]
+        public async Task<IActionResult> RefreshToken([FromBody] string token)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                  var result= await accountRepo.CreateAccessTokenFromRefreshToken(token);
+
+                    if (result is string message && message == "Invalid or expired refresh token")
+                    {
+                        return Unauthorized();
+                    }
+
+                    return Ok(result);
+                }
+
+                else
+                {
+                    return BadRequest(ModelState);
+                }
+
+
+
+
+            }
+
+
+            catch (Exception ex)
+            {
+                var errorMessage = ex.InnerException?.Message ?? ex.Message;
+                return StatusCode(500, $"Error: {errorMessage}");
+            }
+
+        }
+
+
+
 
 
     }

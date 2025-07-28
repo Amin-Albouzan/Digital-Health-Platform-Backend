@@ -15,7 +15,8 @@ namespace DijitalSaglikPlatformu.Data
         {
 
         }
-
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<DoctorProfile> DoctorProfile { get; set; }
 
     }
 }

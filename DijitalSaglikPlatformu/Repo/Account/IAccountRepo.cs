@@ -11,7 +11,9 @@ namespace DijitalSaglikPlatformu.Repo.Account
     {
         public Task<string> Register(RegisterNewUser userData,string role);
 
-        public string Login();
+        public Task<string> Login(dtoLogin login);
+
+        public Task<string> CreateAccessTokenFromRefreshToken(string refreshTokenStr);
 
     }
 }

@@ -2,6 +2,7 @@ using DijitalSaglikPlatformu.Data;
 using DijitalSaglikPlatformu.Extentions;
 using DijitalSaglikPlatformu.Models;
 using DijitalSaglikPlatformu.Repo.Account;
+using DijitalSaglikPlatformu.Repo.DoctorProfileRepositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<A
 
 // Repo
 builder.Services.AddScoped<IAccountRepo, AccountRepo>();
+builder.Services.AddScoped<IDoctorProfileRepo, DoctorProfileRepo>();
 
 // Add services to the container.
 

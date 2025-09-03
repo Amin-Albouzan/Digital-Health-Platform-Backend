@@ -17,6 +17,21 @@ namespace DijitalSaglikPlatformu.Data
         }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<DoctorProfile> DoctorProfile { get; set; }
+        public DbSet<DoctorWeeklySchedule> DoctorWeeklySchedule { get; set; }
+        public DbSet<BookedAppointment> BookedAppointment { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<BookedAppointment>()
+               .HasOne<AppUser>()
+            .WithMany()
+            .HasForeignKey(b => b.UserId)
+          .OnDelete(DeleteBehavior.Restrict);
+
+
+        }
+
 
     }
 }

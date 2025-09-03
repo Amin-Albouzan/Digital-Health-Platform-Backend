@@ -4,6 +4,7 @@ using DijitalSaglikPlatformu.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DijitalSaglikPlatformu.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250728165505_UpdateDoctorWeeklyScheduleModel")]
+    partial class UpdateDoctorWeeklyScheduleModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,43 +88,6 @@ namespace DijitalSaglikPlatformu.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-                });
-
-            modelBuilder.Entity("DijitalSaglikPlatformu.Models.BookedAppointment", b =>
-                {
-                    b.Property<int>("BookedAppointmentId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookedAppointmentId"));
-
-                    b.Property<DateOnly>("AppointmentDate")
-                        .HasColumnType("date");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("DoctorProfileId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Notes")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<TimeSpan>("StartTime")
-                        .HasColumnType("time");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("BookedAppointmentId");
-
-                    b.HasIndex("DoctorProfileId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("BookedAppointment");
                 });
 
             modelBuilder.Entity("DijitalSaglikPlatformu.Models.DoctorProfile", b =>
@@ -393,23 +359,6 @@ namespace DijitalSaglikPlatformu.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("DijitalSaglikPlatformu.Models.BookedAppointment", b =>
-                {
-                    b.HasOne("DijitalSaglikPlatformu.Models.DoctorProfile", "Doctor")
-                        .WithMany("BookedAppointment")
-                        .HasForeignKey("DoctorProfileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DijitalSaglikPlatformu.Models.AppUser", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Doctor");
-                });
-
             modelBuilder.Entity("DijitalSaglikPlatformu.Models.DoctorProfile", b =>
                 {
                     b.HasOne("DijitalSaglikPlatformu.Models.AppUser", "AppUser")
@@ -504,8 +453,6 @@ namespace DijitalSaglikPlatformu.Migrations
 
             modelBuilder.Entity("DijitalSaglikPlatformu.Models.DoctorProfile", b =>
                 {
-                    b.Navigation("BookedAppointment");
-
                     b.Navigation("DoctorWeeklySchedule");
                 });
 #pragma warning restore 612, 618

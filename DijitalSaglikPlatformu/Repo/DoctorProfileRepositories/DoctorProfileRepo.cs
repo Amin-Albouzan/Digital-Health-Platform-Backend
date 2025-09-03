@@ -31,32 +31,6 @@ namespace DijitalSaglikPlatformu.Repo.DoctorProfileRepositories
         }
 
 
-
-
-        //public async Task<List<string>> GetDoctorProfiles(int id)
-        //{
-        //    var data=await context.DoctorProfile.FirstOrDefaultAsync(x=>x.DoctorProfileId==id);
-        //   if (data!=null)
-        //    {
-        //        dtoDoctorProfile dtoDoctorProfile = new()
-        //        {
-        //        FirstName=data.FirstName,
-        //        LastName=data.LastName,
-        //        Age=data.Age,
-        //        Specialty=data.Specialty,
-        //            Description = data.Description,
-
-
-
-
-
-        //        };
-
-        //    }
-           
-
-        //}
-
         public async Task<dtoDoctorProfile> CreateDoctorProfiles(dtoDoctorProfile dto,string userId)
         {
             byte[] imageData = null;
@@ -162,6 +136,35 @@ namespace DijitalSaglikPlatformu.Repo.DoctorProfileRepositories
                 .FirstOrDefaultAsync();
 
             return data;
+        }
+
+
+
+
+        public async Task<List<dtoGetDoctorProfile>> GetAllDoctorProfiles()
+        {
+
+
+            var data = await context.DoctorProfile
+               .Select(x => new dtoGetDoctorProfile
+               {
+                   FirstName = x.FirstName,
+                   LastName = x.LastName,
+                   Age = x.Age,
+                   Specialty = x.Specialty,
+                   Description = x.Description,
+                   City = x.City,
+                   Location = x.Location,
+                   PhoneNumber = x.PhoneNumber,
+                   Gender = x.Gender,
+                   PhotoBase64 = x.PhotoUrl != null
+                   ? $"data:{x.PhotoContentType};base64,{Convert.ToBase64String(x.PhotoUrl)}"
+                   : null,
+                   PhotoContentType = x.PhotoContentType })
+                   .ToListAsync();
+
+            return data;
+
         }
     }
 }

@@ -20,6 +20,9 @@ namespace DıjıtalSaglikPlatformApi.Controllers
             doctorProfileRepo = repo;
         }
 
+
+
+        [Authorize(Roles ="Doctor")]
         [HttpGet("GetDoctorProfiles")]
         public async Task<IActionResult> GetDoctorProfiles()
         {
@@ -54,6 +57,38 @@ namespace DıjıtalSaglikPlatformApi.Controllers
 
 
 
+        [Authorize(Roles = "Doctor,User")]
+        [HttpGet("GetAllDoctorProfiles")]
+        public async Task<IActionResult> GetAllDoctorProfiles()
+        {
+            try
+            {
+              
+                var result = await doctorProfileRepo.GetAllDoctorProfiles();
+                if (result == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return Ok(result);
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                var errorMessage = ex.InnerException?.Message ?? ex.Message;
+                return StatusCode(500, $"Error: {errorMessage}");
+            }
+
+
+        }
+
+
+
+
+        [Authorize(Roles = "Doctor")]
         [HttpPost("CreateDoctorProfiles")]
         public async Task<IActionResult> CreateDoctorProfiles(dtoDoctorProfile dtoDoctorProfile)
         {
@@ -98,6 +133,8 @@ namespace DıjıtalSaglikPlatformApi.Controllers
         }
 
 
+
+        [Authorize(Roles = "Doctor")]
         [HttpPut("UpdateDoctorProfiles")]
         public async Task<IActionResult> UpdateDoctorProfiles(dtoUpdateDoctorProfile dtoUpdateDoctorProfile)
         {

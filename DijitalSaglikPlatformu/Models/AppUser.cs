@@ -11,5 +11,6 @@ namespace DijitalSaglikPlatformu.Models
     {
         public List<RefreshToken>? RefreshTokens { get; set; }
         public DoctorProfile DoctorProfile { get; set; }
+        //public List<BookedAppointment>? BookedAppointment { get; set; }
     }
 }

@@ -1,10 +1,16 @@
+﻿using System.Text.Json.Serialization;
 using DijitalSaglikPlatformu.Data;
 using DijitalSaglikPlatformu.Extentions;
 using DijitalSaglikPlatformu.Models;
 using DijitalSaglikPlatformu.Repo.Account;
 using DijitalSaglikPlatformu.Repo.DoctorProfileRepositories;
+using DijitalSaglikPlatformu.Repo.DoctorWeeklyScheduleRepositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
+using DijitalSaglikPlatformu.Repo.BookedAppointmentRepositories;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,12 +24,25 @@ builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<A
 // Repo
 builder.Services.AddScoped<IAccountRepo, AccountRepo>();
 builder.Services.AddScoped<IDoctorProfileRepo, DoctorProfileRepo>();
+builder.Services.AddScoped<IDoctorWeeklyScheduleRepo, DoctorWeeklyScheduleRepo>();
+builder.Services.AddScoped<IBookedAppointmentRepo, BookedAppointmentRepo>();
+
+
 
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
+
+
 
 // Extentions 
 builder.Services.AddSwaggerGenJwtAuth();

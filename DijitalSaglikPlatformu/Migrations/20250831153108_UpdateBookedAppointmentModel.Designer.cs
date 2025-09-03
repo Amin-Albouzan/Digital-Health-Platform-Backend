@@ -4,6 +4,7 @@ using DijitalSaglikPlatformu.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DijitalSaglikPlatformu.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250831153108_UpdateBookedAppointmentModel")]
+    partial class UpdateBookedAppointmentModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -95,6 +98,9 @@ namespace DijitalSaglikPlatformu.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookedAppointmentId"));
 
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateOnly>("AppointmentDate")
                         .HasColumnType("date");
 
@@ -116,6 +122,8 @@ namespace DijitalSaglikPlatformu.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("BookedAppointmentId");
+
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("DoctorProfileId");
 
@@ -395,17 +403,23 @@ namespace DijitalSaglikPlatformu.Migrations
 
             modelBuilder.Entity("DijitalSaglikPlatformu.Models.BookedAppointment", b =>
                 {
+                    b.HasOne("DijitalSaglikPlatformu.Models.AppUser", null)
+                        .WithMany("BookedAppointment")
+                        .HasForeignKey("AppUserId");
+
                     b.HasOne("DijitalSaglikPlatformu.Models.DoctorProfile", "Doctor")
                         .WithMany("BookedAppointment")
                         .HasForeignKey("DoctorProfileId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DijitalSaglikPlatformu.Models.AppUser", null)
+                    b.HasOne("DijitalSaglikPlatformu.Models.AppUser", "AppUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("AppUser");
 
                     b.Navigation("Doctor");
                 });
@@ -496,6 +510,8 @@ namespace DijitalSaglikPlatformu.Migrations
 
             modelBuilder.Entity("DijitalSaglikPlatformu.Models.AppUser", b =>
                 {
+                    b.Navigation("BookedAppointment");
+
                     b.Navigation("DoctorProfile")
                         .IsRequired();
 

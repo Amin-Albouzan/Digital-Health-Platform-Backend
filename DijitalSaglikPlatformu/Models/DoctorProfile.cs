@@ -67,6 +67,8 @@ namespace DijitalSaglikPlatformu.Models
 
 
         public AppUser AppUser { get; set; }
+        public List<DoctorWeeklySchedule> DoctorWeeklySchedule { get; set; }
+        public List<BookedAppointment> BookedAppointment { get; set; }
 
     }
 }

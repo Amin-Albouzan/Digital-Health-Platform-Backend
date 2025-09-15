@@ -33,8 +33,11 @@ namespace DijitalSaglikPlatformu.Repo.BookedAppointmentRepositories
 
         public async Task<dtoCreateBookAppointment> BookAppointment(dtoCreateBookAppointment dto, string UserId)
         {
-            var result = await context.BookedAppointment.
-                 Where(x => x.UserId == UserId).FirstOrDefaultAsync(y => y.DoctorProfileId==dto.DoctorProfileId);
+            var result = await context.BookedAppointment
+                 .Where(x => x.DoctorProfileId == dto.DoctorProfileId &&
+                 x.UserId == UserId &&
+                 x.AppointmentDate >= DateOnly.FromDateTime(DateTime.UtcNow))
+                .FirstOrDefaultAsync();
 
             if (result != null)
             throw new ArgumentException("You already have an appointment with this doctor.");

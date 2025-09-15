@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BDAD172-B8B1-46F8-891D-C64149ED073B}|D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi.csproj|c:\\users\\acer\\desktop\\d\u0131j\u0131talsaglikplatformapi\\d\u0131j\u0131talsaglikplatformapi\\controllers\\bookedappointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BDAD172-B8B1-46F8-891D-C64149ED073B}|D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi.csproj|solutionrelative:d\u0131j\u0131talsaglikplatformapi\\controllers\\bookedappointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|c:\\users\\acer\\desktop\\d\u0131j\u0131talsaglikplatformapi\\dijitalsaglikplatformu\\repo\\doctorprofilerepositories\\doctorprofilerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|solutionrelative:dijitalsaglikplatformu\\repo\\doctorprofilerepositories\\doctorprofilerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|c:\\users\\acer\\desktop\\d\u0131j\u0131talsaglikplatformapi\\dijitalsaglikplatformu\\repo\\bookedappointmentrepositories\\bookedappointmentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|solutionrelative:dijitalsaglikplatformu\\repo\\bookedappointmentrepositories\\bookedappointmentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BDAD172-B8B1-46F8-891D-C64149ED073B}|D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi.csproj|c:\\users\\acer\\desktop\\d\u0131j\u0131talsaglikplatformapi\\d\u0131j\u0131talsaglikplatformapi\\controllers\\availabilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BDAD172-B8B1-46F8-891D-C64149ED073B}|D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi.csproj|solutionrelative:d\u0131j\u0131talsaglikplatformapi\\controllers\\availabilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BookedAppointmentRepo.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\BookedAppointmentRepositories\\BookedAppointmentRepo.cs",
-              "RelativeDocumentMoniker": "DijitalSaglikPlatformu\\Repo\\BookedAppointmentRepositories\\BookedAppointmentRepo.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\BookedAppointmentRepositories\\BookedAppointmentRepo.cs",
-              "RelativeToolTip": "DijitalSaglikPlatformu\\Repo\\BookedAppointmentRepositories\\BookedAppointmentRepo.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA0wDsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "DoctorProfileRepo.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\DoctorProfileRepositories\\DoctorProfileRepo.cs",
+              "RelativeDocumentMoniker": "DijitalSaglikPlatformu\\Repo\\DoctorProfileRepositories\\DoctorProfileRepo.cs",
+              "ToolTip": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\DoctorProfileRepositories\\DoctorProfileRepo.cs",
+              "RelativeToolTip": "DijitalSaglikPlatformu\\Repo\\DoctorProfileRepositories\\DoctorProfileRepo.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T14:36:07.335Z",
+              "WhenOpened": "2025-09-15T12:57:35.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookedAppointmentController.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi\\Controllers\\BookedAppointmentController.cs",
-              "RelativeDocumentMoniker": "D\u0131j\u0131talSaglikPlatformApi\\Controllers\\BookedAppointmentController.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi\\Controllers\\BookedAppointmentController.cs",
-              "RelativeToolTip": "D\u0131j\u0131talSaglikPlatformApi\\Controllers\\BookedAppointmentController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAxwHwAAABCAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AvailabilityController.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
+              "RelativeDocumentMoniker": "D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
+              "ToolTip": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
+              "RelativeToolTip": "D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T14:35:12.862Z",
+              "WhenOpened": "2025-09-15T11:16:10.152Z",
               "EditorCaption": ""
             }
           ]

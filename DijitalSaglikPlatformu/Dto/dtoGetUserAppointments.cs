@@ -11,7 +11,7 @@ namespace DijitalSaglikPlatformu.Dto
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateOnly AppointmentDate { get; set; }
-        public TimeSpan StartTime { get; set; }
+        public DateTime StartTime { get; set; }
         public string Location { get; set; }
 
     }

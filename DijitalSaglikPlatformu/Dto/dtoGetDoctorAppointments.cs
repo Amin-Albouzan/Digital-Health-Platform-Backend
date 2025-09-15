@@ -16,7 +16,7 @@ namespace DijitalSaglikPlatformu.Dto
         [Column(TypeName = "date")]
         public DateOnly AppointmentDate { get; set; }
 
-        public TimeSpan StartTime { get; set; }
+        public DateTime StartTime { get; set; }
 
 
         [MaxLength(500)]

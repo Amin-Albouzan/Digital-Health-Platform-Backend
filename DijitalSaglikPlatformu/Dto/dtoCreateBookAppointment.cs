@@ -20,7 +20,7 @@ namespace DijitalSaglikPlatformu.Dto
 
 
 
-        public TimeSpan StartTime { get; set; }
+        public DateTime StartTime { get; set; }
 
 
         [MaxLength(500)]

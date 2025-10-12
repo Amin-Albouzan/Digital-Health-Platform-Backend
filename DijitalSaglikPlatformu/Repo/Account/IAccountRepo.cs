@@ -15,5 +15,9 @@ namespace DijitalSaglikPlatformu.Repo.Account
 
         public Task<string> CreateAccessTokenFromRefreshToken(string refreshTokenStr);
 
+        public Task<string> ResetPassword(dtoResetPassword dto);
+
+       
+
     }
 }

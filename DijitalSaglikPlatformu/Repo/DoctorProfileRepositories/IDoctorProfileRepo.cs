@@ -16,5 +16,8 @@ namespace DijitalSaglikPlatformu.Repo.DoctorProfileRepositories
         public Task<dtoDoctorProfile> CreateDoctorProfiles(dtoDoctorProfile dto,string userId);
         public Task<dtoUpdateDoctorProfile> UpdateDoctorProfiles(dtoUpdateDoctorProfile dto);
 
-    }
+        public Task<List<dtoSearchDoctorResult>> SearchDoctorsAsync( string? specialty,string? city, string? gender,double? minRating);
+    
+
+}
 }

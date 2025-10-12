@@ -32,9 +32,6 @@ namespace DıjıtalSaglikPlatformApi.Controllers
 
 
 
-
-
-
         [HttpPost("RegisterNewUser/{role}")]
         public async Task<IActionResult> RegisterNewUser([FromRoute] string role, [FromBody] RegisterNewUser user)
         {
@@ -71,9 +68,6 @@ namespace DıjıtalSaglikPlatformApi.Controllers
 
 
         }
-
-
-
 
 
 
@@ -155,6 +149,39 @@ namespace DıjıtalSaglikPlatformApi.Controllers
 
 
 
+        [HttpPost("ResetPassword")]
+        public async Task<IActionResult> ResetPassword([FromBody] dtoResetPassword dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-    }
+            try
+            {
+              var result = await accountRepo.ResetPassword(dto);
+
+                return Ok(result);
+            }
+
+            catch(ArgumentException ex) 
+            {
+
+                var errorMessage = ex.InnerException?.Message ?? ex.Message;
+                return BadRequest(errorMessage);
+
+            }
+
+
+            
+
+        }
+
+
+
+
+
+
+
+
+
+        }
 }

@@ -137,10 +137,6 @@ namespace DijitalSaglikPlatformu.Repo.Account
 
         public async Task<string> CreateAccessTokenFromRefreshToken(string refreshTokenStr)
         {
-
-            
-
-
                 var token = await context.RefreshTokens
                  .Include(t => t.User)
                  .FirstOrDefaultAsync(t => t.Token == refreshTokenStr && t.RevokedOn == null);
@@ -204,6 +200,36 @@ namespace DijitalSaglikPlatformu.Repo.Account
            
 
         }
+
+
+
+       
+
+        public async Task<string> ResetPassword(dtoResetPassword dto)
+        {
+            var UserData = await usermanager.FindByEmailAsync(dto.Email);
+            if (UserData == null)
+                throw new ArgumentException("Invalid Email");
+
+           if(UserData.UserName!=dto.UserName)
+                throw new ArgumentException("Invalid Name ");
+
+
+            var removePasswordResult = await usermanager.RemovePasswordAsync(UserData);
+            if (!removePasswordResult.Succeeded)
+                 throw new ArgumentException("Failed to remove old password.");
+
+
+            var addPasswordResult = await usermanager.AddPasswordAsync(UserData, dto.NewPassword);
+            if (!addPasswordResult.Succeeded)
+                throw new ArgumentException("Failed to set new password.");
+
+
+            return("Password reset successfully.");
+        }
+
+
+
 
     }
 }

@@ -19,6 +19,7 @@ namespace DijitalSaglikPlatformu.Data
         public DbSet<DoctorProfile> DoctorProfile { get; set; }
         public DbSet<DoctorWeeklySchedule> DoctorWeeklySchedule { get; set; }
         public DbSet<BookedAppointment> BookedAppointment { get; set; }
+        public DbSet<DoctorReview> DoctorReview { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,6 +29,19 @@ namespace DijitalSaglikPlatformu.Data
             .WithMany()
             .HasForeignKey(b => b.UserId)
           .OnDelete(DeleteBehavior.Restrict);
+
+
+            modelBuilder.Entity<DoctorReview>()
+        .HasOne(r => r.DoctorProfile)
+        .WithMany()
+        .HasForeignKey(r => r.DoctorProfileId)
+        .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<DoctorReview>()
+                .HasOne(r => r.AppUser)
+                .WithMany()
+                .HasForeignKey(r => r.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
 
         }

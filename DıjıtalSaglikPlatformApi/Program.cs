@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using DijitalSaglikPlatformu.Repo.BookedAppointmentRepositories;
 using DijitalSaglikPlatformu.Repo.AvailabilityRepositories;
+using DijitalSaglikPlatformu.Repo.DoctorReviewRepositories;
 
 
 
@@ -28,6 +29,7 @@ builder.Services.AddScoped<IDoctorProfileRepo, DoctorProfileRepo>();
 builder.Services.AddScoped<IDoctorWeeklyScheduleRepo, DoctorWeeklyScheduleRepo>();
 builder.Services.AddScoped<IBookedAppointmentRepo, BookedAppointmentRepo>();
 builder.Services.AddScoped<IAvailabilityRepo, AvailabilityRepo>();
+builder.Services.AddScoped<IDoctorReviewRepo, DoctorReviewRepo>();
 
 
 // Add services to the container.

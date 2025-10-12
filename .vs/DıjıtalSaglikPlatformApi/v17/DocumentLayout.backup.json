@@ -1,71 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|c:\\users\\acer\\desktop\\d\u0131j\u0131talsaglikplatformapi\\dijitalsaglikplatformu\\repo\\availabilityrepositories\\availabilityrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|solutionrelative:dijitalsaglikplatformu\\repo\\availabilityrepositories\\availabilityrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|c:\\users\\acer\\desktop\\d\u0131j\u0131talsaglikplatformapi\\dijitalsaglikplatformu\\repo\\bookedappointmentrepositories\\bookedappointmentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|solutionrelative:dijitalsaglikplatformu\\repo\\bookedappointmentrepositories\\bookedappointmentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BDAD172-B8B1-46F8-891D-C64149ED073B}|D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi.csproj|c:\\users\\acer\\desktop\\d\u0131j\u0131talsaglikplatformapi\\d\u0131j\u0131talsaglikplatformapi\\controllers\\availabilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BDAD172-B8B1-46F8-891D-C64149ED073B}|D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi.csproj|solutionrelative:d\u0131j\u0131talsaglikplatformapi\\controllers\\availabilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BookedAppointmentRepo.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\BookedAppointmentRepositories\\BookedAppointmentRepo.cs",
-              "RelativeDocumentMoniker": "DijitalSaglikPlatformu\\Repo\\BookedAppointmentRepositories\\BookedAppointmentRepo.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\BookedAppointmentRepositories\\BookedAppointmentRepo.cs",
-              "RelativeToolTip": "DijitalSaglikPlatformu\\Repo\\BookedAppointmentRepositories\\BookedAppointmentRepo.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAA0wCQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T11:33:46.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AvailabilityController.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
-              "RelativeDocumentMoniker": "D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
-              "RelativeToolTip": "D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwCQAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T11:16:10.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AvailabilityRepo.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\AvailabilityRepositories\\AvailabilityRepo.cs",
-              "RelativeDocumentMoniker": "DijitalSaglikPlatformu\\Repo\\AvailabilityRepositories\\AvailabilityRepo.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\AvailabilityRepositories\\AvailabilityRepo.cs",
-              "RelativeToolTip": "DijitalSaglikPlatformu\\Repo\\AvailabilityRepositories\\AvailabilityRepo.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAwG8AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T11:07:27.101Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

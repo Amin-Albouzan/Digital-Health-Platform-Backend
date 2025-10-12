@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|c:\\users\\acer\\desktop\\d\u0131j\u0131talsaglikplatformapi\\dijitalsaglikplatformu\\repo\\doctorprofilerepositories\\doctorprofilerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|solutionrelative:dijitalsaglikplatformu\\repo\\doctorprofilerepositories\\doctorprofilerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|c:\\users\\acer\\desktop\\d\u0131j\u0131talsaglikplatformapi\\dijitalsaglikplatformu\\repo\\doctorreviewrepositories\\idoctorreviewrepo .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094F97DA-5E3C-460B-9C10-57C04BDEAE1E}|DijitalSaglikPlatformu\\DijitalSaglikPlatformu.csproj|solutionrelative:dijitalsaglikplatformu\\repo\\doctorreviewrepositories\\idoctorreviewrepo .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BDAD172-B8B1-46F8-891D-C64149ED073B}|D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi.csproj|c:\\users\\acer\\desktop\\d\u0131j\u0131talsaglikplatformapi\\d\u0131j\u0131talsaglikplatformapi\\controllers\\availabilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BDAD172-B8B1-46F8-891D-C64149ED073B}|D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi.csproj|solutionrelative:d\u0131j\u0131talsaglikplatformapi\\controllers\\availabilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BDAD172-B8B1-46F8-891D-C64149ED073B}|D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi.csproj|c:\\users\\acer\\desktop\\d\u0131j\u0131talsaglikplatformapi\\d\u0131j\u0131talsaglikplatformapi\\controllers\\doctorreviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BDAD172-B8B1-46F8-891D-C64149ED073B}|D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi.csproj|solutionrelative:d\u0131j\u0131talsaglikplatformapi\\controllers\\doctorreviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DoctorProfileRepo.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\DoctorProfileRepositories\\DoctorProfileRepo.cs",
-              "RelativeDocumentMoniker": "DijitalSaglikPlatformu\\Repo\\DoctorProfileRepositories\\DoctorProfileRepo.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\DoctorProfileRepositories\\DoctorProfileRepo.cs",
-              "RelativeToolTip": "DijitalSaglikPlatformu\\Repo\\DoctorProfileRepositories\\DoctorProfileRepo.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Title": "IDoctorReviewRepo .cs",
+              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\DoctorReviewRepositories\\IDoctorReviewRepo .cs",
+              "RelativeDocumentMoniker": "DijitalSaglikPlatformu\\Repo\\DoctorReviewRepositories\\IDoctorReviewRepo .cs",
+              "ToolTip": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\DijitalSaglikPlatformu\\Repo\\DoctorReviewRepositories\\IDoctorReviewRepo .cs",
+              "RelativeToolTip": "DijitalSaglikPlatformu\\Repo\\DoctorReviewRepositories\\IDoctorReviewRepo .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T12:57:35.077Z",
+              "WhenOpened": "2025-10-11T12:39:44.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AvailabilityController.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
-              "RelativeDocumentMoniker": "D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
-              "RelativeToolTip": "D\u0131j\u0131talSaglikPlatformApi\\Controllers\\AvailabilityController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAACQAAAAqAAAAAAAAAA==",
+              "Title": "DoctorReviewController.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi\\Controllers\\DoctorReviewController.cs",
+              "RelativeDocumentMoniker": "D\u0131j\u0131talSaglikPlatformApi\\Controllers\\DoctorReviewController.cs",
+              "ToolTip": "C:\\Users\\acer\\Desktop\\D\u0131j\u0131talSaglikPlatformApi\\D\u0131j\u0131talSaglikPlatformApi\\Controllers\\DoctorReviewController.cs",
+              "RelativeToolTip": "D\u0131j\u0131talSaglikPlatformApi\\Controllers\\DoctorReviewController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T11:16:10.152Z",
+              "WhenOpened": "2025-10-11T12:36:25.262Z",
               "EditorCaption": ""
             }
           ]

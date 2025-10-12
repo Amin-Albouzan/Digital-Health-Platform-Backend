@@ -166,5 +166,48 @@ namespace DijitalSaglikPlatformu.Repo.DoctorProfileRepositories
             return data;
 
         }
+
+
+        public async Task<List<dtoSearchDoctorResult>> SearchDoctorsAsync(string? specialty, string? city, string? gender, double? minRating)
+        {
+            var query = context.DoctorProfile.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(specialty))
+                query = query.Where(d => d.Specialty.Contains(specialty));
+
+            if (!string.IsNullOrWhiteSpace(city))
+                query = query.Where(d => d.City.Contains(city));
+
+            if (!string.IsNullOrWhiteSpace(gender))
+                query = query.Where(d => d.Gender == gender);
+
+            if (minRating.HasValue)
+                query = query.Where(d => d.AverageRating >= minRating.Value);
+
+            return await query
+                .Select(d => new dtoSearchDoctorResult
+                {
+                    DoctorProfileId=d.DoctorProfileId,
+                    FirstName = d.FirstName,
+                    LastName = d.LastName,
+                    Age = d.Age,
+                    Specialty = d.Specialty,
+                    City = d.City,
+                    Gender = d.Gender,
+                    AverageRating = d.AverageRating,
+                    Description = d.Description,
+                    PhotoBase64 = d.PhotoUrl != null
+                    ? $"data:{d.PhotoContentType};base64,{Convert.ToBase64String(d.PhotoUrl)}"
+                    : null,
+                    PhotoContentType = d.PhotoContentType,
+                    Location = d.Location,
+                    PhoneNumber = d.PhoneNumber,
+                })
+                .OrderByDescending(d => d.AverageRating)
+                .ToListAsync();
+        }
+
+
+
     }
 }

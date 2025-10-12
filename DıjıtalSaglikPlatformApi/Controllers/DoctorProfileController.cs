@@ -174,5 +174,31 @@ namespace DıjıtalSaglikPlatformApi.Controllers
         }
 
 
+        [Authorize(Roles = "Doctor,User")]
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchDoctors(
+           [FromQuery] string? specialty,
+           [FromQuery] string? city,
+           [FromQuery] string? gender,
+           [FromQuery] double? minRating)
+        {
+            try
+            {
+                var doctors = await doctorProfileRepo.SearchDoctorsAsync(specialty, city, gender, minRating);
+
+                if (doctors == null || !doctors.Any())
+                    return NotFound("No doctors found with these filters.");
+
+                return Ok(doctors);
+            }
+            catch (Exception ex)
+            {
+                var errorMessage = ex.InnerException?.Message ?? ex.Message;
+                return StatusCode(500, $"Error: {errorMessage}");
+            }
+        }
+
+
+
     }
 }

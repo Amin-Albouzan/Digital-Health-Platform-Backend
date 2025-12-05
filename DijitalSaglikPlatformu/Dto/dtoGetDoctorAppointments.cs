@@ -10,8 +10,9 @@ namespace DijitalSaglikPlatformu.Dto
 {
     public class dtoGetDoctorAppointments
     {
-
+        public int BookedAppointmentId { get; set; }
         public string UserName { get; set; }
+        public string Email { get; set; }
 
         [Column(TypeName = "date")]
         public DateOnly AppointmentDate { get; set; }

@@ -103,7 +103,9 @@ namespace DijitalSaglikPlatformu.Repo.BookedAppointmentRepositories
                 UM => UM.Id,
                 (combined, UM) => new dtoGetDoctorAppointments
                 {
-                    UserName=UM.UserName,
+                    Email = UM.Email,
+                    BookedAppointmentId = combined.BA.BookedAppointmentId,
+                    UserName =UM.UserName,
                     AppointmentDate = combined.BA.AppointmentDate,
                     StartTime= combined.BA.StartTime,
                     Notes= combined.BA.Notes
@@ -130,9 +132,13 @@ namespace DijitalSaglikPlatformu.Repo.BookedAppointmentRepositories
                 doctorProfile => doctorProfile.DoctorProfileId,
                 (bookedAppointment, doctorProfile) =>new dtoGetUserAppointments
                 {
-                    FirstName= doctorProfile.FirstName,
+                    BookedAppointmentId = bookedAppointment.BookedAppointmentId,
+                    DoctorProfileId = doctorProfile.DoctorProfileId,
+                    FirstName = doctorProfile.FirstName,
                     LastName= doctorProfile.LastName,
-                    AppointmentDate= bookedAppointment.AppointmentDate,
+                    Specialty = doctorProfile.Specialty,
+                    PhoneNumber = doctorProfile.PhoneNumber,
+                    AppointmentDate = bookedAppointment.AppointmentDate,
                     StartTime= bookedAppointment.StartTime,
                     Location=doctorProfile.Location,
                 })

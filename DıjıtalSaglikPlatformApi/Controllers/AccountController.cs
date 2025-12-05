@@ -60,6 +60,15 @@ namespace DıjıtalSaglikPlatformApi.Controllers
             }
 
 
+            catch (ArgumentException ex)
+            {
+                var errorMessage = ex.InnerException?.Message ?? ex.Message;
+                return BadRequest(errorMessage);
+            }
+
+
+
+
             catch (Exception ex)
             {
                 var errorMessage = ex.InnerException?.Message ?? ex.Message;

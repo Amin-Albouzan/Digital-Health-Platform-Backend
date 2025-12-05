@@ -123,6 +123,15 @@ namespace DıjıtalSaglikPlatformApi.Controllers
                 }
                
             }
+
+            catch (ArgumentException ex)
+            {
+                var errorMessage = ex.InnerException?.Message ?? ex.Message;
+                return BadRequest( $"Error: {errorMessage}");
+            }
+
+
+
             catch (Exception ex)
             {
                 var errorMessage = ex.InnerException?.Message ?? ex.Message;
@@ -146,8 +155,12 @@ namespace DıjıtalSaglikPlatformApi.Controllers
 
            try
             {
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userId))
+                    return Unauthorized("Invalid token or missing user ID.");
+
                 var result = await doctorProfileRepo.
-                     UpdateDoctorProfiles(dtoUpdateDoctorProfile);
+                     UpdateDoctorProfiles(dtoUpdateDoctorProfile, userId);
                 if (result == null)
                 {
                     return BadRequest("Doctor profile not found.");
@@ -172,6 +185,43 @@ namespace DıjıtalSaglikPlatformApi.Controllers
 
 
         }
+
+
+
+
+
+
+        [Authorize(Roles ="Doctor,User")]
+        [HttpGet("GetDoctorProfileById/{DoctorProfileId}")]
+        public async Task<IActionResult> GetDoctorProfileById([FromRoute] int DoctorProfileId)
+        {
+            try
+            {
+                
+                var result = await doctorProfileRepo.GetDoctorProfileById(DoctorProfileId);
+                if (result == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return Ok(result);
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                var errorMessage = ex.InnerException?.Message ?? ex.Message;
+                return StatusCode(500, $"Error: {errorMessage}");
+            }
+
+
+        }
+
+
+
+
 
 
         [Authorize(Roles = "Doctor,User")]

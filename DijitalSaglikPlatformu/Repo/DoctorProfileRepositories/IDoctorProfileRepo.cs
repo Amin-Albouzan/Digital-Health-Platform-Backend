@@ -12,12 +12,16 @@ namespace DijitalSaglikPlatformu.Repo.DoctorProfileRepositories
     public interface IDoctorProfileRepo
     {
         public Task<dtoGetDoctorProfile> GetDoctorProfiles(string UserId);
-        public Task<List<dtoGetDoctorProfile>> GetAllDoctorProfiles();
+        public Task<List<dtoGetAllDoctorProfiles>> GetAllDoctorProfiles();
         public Task<dtoDoctorProfile> CreateDoctorProfiles(dtoDoctorProfile dto,string userId);
-        public Task<dtoUpdateDoctorProfile> UpdateDoctorProfiles(dtoUpdateDoctorProfile dto);
+        public Task<dtoUpdateDoctorProfile> UpdateDoctorProfiles(dtoUpdateDoctorProfile dto, string userId);
 
         public Task<List<dtoSearchDoctorResult>> SearchDoctorsAsync( string? specialty,string? city, string? gender,double? minRating);
-    
 
-}
+
+
+        public Task<dtoGetAllDoctorProfiles> GetDoctorProfileById(int DoctorProfileId);
+
+
+    }
 }

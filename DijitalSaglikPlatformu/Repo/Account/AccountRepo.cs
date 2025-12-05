@@ -90,7 +90,8 @@ namespace DijitalSaglikPlatformu.Repo.Account
                         token = new JwtSecurityTokenHandler().WriteToken(token),
                         expiration = token.ValidTo,
                         RefreshToken= refreshTokenStr,
-                       
+                        Role= roles
+
                     };
                     return JsonSerializer.Serialize(_token);
                 }
@@ -111,6 +112,14 @@ namespace DijitalSaglikPlatformu.Repo.Account
 
         public async Task<string> Register(RegisterNewUser userData,string role)
         {
+
+            AppUser? TestEmail = await usermanager.FindByEmailAsync(userData.Email);
+            if(TestEmail!=null)
+            {
+               throw new ArgumentException("This email address is already in use.");
+            }
+
+
             AppUser appUser = new()
             {
                 UserName = userData.UserName,

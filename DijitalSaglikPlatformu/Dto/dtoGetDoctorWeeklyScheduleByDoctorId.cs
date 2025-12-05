@@ -10,6 +10,9 @@ namespace DijitalSaglikPlatformu.Dto
     public class dtoGetDoctorWeeklyScheduleByDoctorId
     {
         [Required]
+        public int Id { get; set; }
+
+        [Required]
         public DayOfWeek DayOfWeek { get; set; } // Monday, Tuesday, etc.
        
         [Required]

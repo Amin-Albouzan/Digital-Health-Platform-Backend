@@ -33,6 +33,17 @@ namespace DijitalSaglikPlatformu.Repo.DoctorProfileRepositories
 
         public async Task<dtoDoctorProfile> CreateDoctorProfiles(dtoDoctorProfile dto,string userId)
         {
+
+            var UserData=await context.DoctorProfile.FirstOrDefaultAsync(x => x.AppUserId == userId);
+            if (UserData != null)
+            {
+                throw new ArgumentException("Doctor profile already exists for this user.");
+            }
+
+
+
+
+
             byte[] imageData = null;
             if (dto.PhotoUrl != null && dto.PhotoUrl.Length > 0)
             {
@@ -73,9 +84,9 @@ namespace DijitalSaglikPlatformu.Repo.DoctorProfileRepositories
 
        
 
-        public async Task<dtoUpdateDoctorProfile> UpdateDoctorProfiles(dtoUpdateDoctorProfile NewDto)
+        public async Task<dtoUpdateDoctorProfile> UpdateDoctorProfiles(dtoUpdateDoctorProfile NewDto,string userId)
         {
-            DoctorProfile OldDoctorProfile = await context.DoctorProfile.FirstOrDefaultAsync(x => x.DoctorProfileId== NewDto.DoctorProfileId);
+            DoctorProfile OldDoctorProfile = await context.DoctorProfile.FirstOrDefaultAsync(x => x.AppUserId== userId);
             if(OldDoctorProfile==null)
             {
                 return null;
@@ -141,13 +152,14 @@ namespace DijitalSaglikPlatformu.Repo.DoctorProfileRepositories
 
 
 
-        public async Task<List<dtoGetDoctorProfile>> GetAllDoctorProfiles()
+        public async Task<List<dtoGetAllDoctorProfiles>> GetAllDoctorProfiles()
         {
 
 
             var data = await context.DoctorProfile
-               .Select(x => new dtoGetDoctorProfile
+               .Select(x => new dtoGetAllDoctorProfiles
                {
+                   DoctorProfileId = x.DoctorProfileId,
                    FirstName = x.FirstName,
                    LastName = x.LastName,
                    Age = x.Age,
@@ -160,7 +172,11 @@ namespace DijitalSaglikPlatformu.Repo.DoctorProfileRepositories
                    PhotoBase64 = x.PhotoUrl != null
                    ? $"data:{x.PhotoContentType};base64,{Convert.ToBase64String(x.PhotoUrl)}"
                    : null,
-                   PhotoContentType = x.PhotoContentType })
+                   PhotoContentType = x.PhotoContentType,
+                   AverageRating = x.AverageRating
+
+
+               })
                    .ToListAsync();
 
             return data;
@@ -205,6 +221,39 @@ namespace DijitalSaglikPlatformu.Repo.DoctorProfileRepositories
                 })
                 .OrderByDescending(d => d.AverageRating)
                 .ToListAsync();
+        }
+
+
+
+
+        public async Task<dtoGetAllDoctorProfiles> GetDoctorProfileById(int DoctorProfileId)
+        {
+            var data = await context.DoctorProfile
+               .Where(x => x.DoctorProfileId == DoctorProfileId)
+               .Select(x => new dtoGetAllDoctorProfiles
+               {
+                   DoctorProfileId = x.DoctorProfileId,
+                   FirstName = x.FirstName,
+                   LastName = x.LastName,
+                   Age = x.Age,
+                   Specialty = x.Specialty,
+                   Description = x.Description,
+                   City = x.City,
+                   Location = x.Location,
+                   PhoneNumber = x.PhoneNumber,
+                   Gender = x.Gender,
+                   PhotoBase64 = x.PhotoUrl != null
+                   ? $"data:{x.PhotoContentType};base64,{Convert.ToBase64String(x.PhotoUrl)}"
+                   : null,
+                   PhotoContentType = x.PhotoContentType,
+                   AverageRating = x.AverageRating
+
+
+
+               })
+               .FirstOrDefaultAsync();
+
+            return data;
         }
 
 

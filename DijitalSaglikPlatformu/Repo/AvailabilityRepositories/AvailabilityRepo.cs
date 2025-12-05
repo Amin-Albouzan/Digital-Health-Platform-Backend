@@ -114,5 +114,8 @@ namespace DijitalSaglikPlatformu.Repo.AvailabilityRepositories
 
             return freeSlots;
         }
+
+
+
     }
 }

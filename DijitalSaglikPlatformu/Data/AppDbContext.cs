@@ -44,6 +44,13 @@ namespace DijitalSaglikPlatformu.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
 
+
+            modelBuilder.Entity<AppUser>()
+       .HasIndex(u => u.NormalizedEmail)
+       .IsUnique()
+       .HasDatabaseName("EmailIndex")
+       .HasFilter("[NormalizedEmail] IS NOT NULL"); // فلتر مفيد في SQL Server للسماح بعدم فرض التميّز على
+
         }
 
 

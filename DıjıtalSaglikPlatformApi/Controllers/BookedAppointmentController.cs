@@ -120,9 +120,9 @@ namespace DıjıtalSaglikPlatformApi.Controllers
 
 
 
-        [Authorize(Roles = "Doctor")]
+        [Authorize(Roles ="Doctor,User")]
         [HttpDelete("CancelAppointment/{id}")]
-        public async Task<IActionResult> CancelAppointment(int id)
+        public async Task<IActionResult> CancelAppointment([FromRoute] int id)
         {
             try
             {

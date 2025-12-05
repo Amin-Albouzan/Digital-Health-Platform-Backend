@@ -84,6 +84,7 @@ namespace DijitalSaglikPlatformu.Repo.DoctorWeeklyScheduleRepositories
                 .Where(x => x.DoctorProfileId == doctor.DoctorProfileId)
                 .Select(x => new dtoGetDoctorWeeklyScheduleByDoctorId
                 {
+                    Id = x.Id,
                     DayOfWeek = x.DayOfWeek,
                     StartTime = x.StartTime,
                     EndTime = x.EndTime,
